@@ -17,7 +17,7 @@ def timezone():
 	timezones ={1: -120, 2: -180, 3: -240, 4: -300, 5: -360, 6: -420, 7: -480, 8: -540, 9: -600, 10: -660, 11: -720, 12: -780, 13: 600, 14: 540, 15: 480, 16: 420, 17: 360, 18: 300, 19: 240, 20: 180, 21: 120, 22: 60, 23: 0}
 	return int(timezones[datetime.utcnow().hour])
 def get_timers():
-	return [{"start":int(datetime.timestamp(datetime.now())),"end":int(datetime.timestamp(datetime.now()))+300} for _ in range(36)]
+	return [{"start":int(datetime.timestamp(datetime.now())),"end":int(datetime.timestamp(datetime.now()))+300} for _ in range(20)]
 community = input("community accounts online in :")
 accounts = open("accounts.json").read()
 accounts = json.loads(accounts)
